@@ -105,7 +105,7 @@ export default function ResultsPage({ result, error, mode, onReset, onRetry, onS
   function handleDownload() {
     if (!rewrittenCv) return;
 const raw = formData?.cvFileName ?? '';
-    const base = raw ? raw.replace(/\.[^.]+$/, '') : '';
+    const base = raw ? raw.replace(/\.[^.]+$/, '').replace(/^Tailored_/i, '') : '';
     const filename = base ? `Tailored_${base}` : 'Tailored_CV';
     downloadWord(rewrittenCv, filename);
   }

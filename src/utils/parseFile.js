@@ -43,6 +43,9 @@ export async function extractTextFromPDF(file) {
 export async function extractTextFromWord(file) {
   const arrayBuffer = await file.arrayBuffer();
   const result = await mammoth.extractRawText({ arrayBuffer });
+  if (result.value.trim().length === 0) {
+    throw new Error("We couldn't read any text from this file. Please paste your CV as text instead.");
+  }
   return result.value.trim();
 }
 
