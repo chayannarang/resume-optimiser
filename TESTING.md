@@ -145,4 +145,16 @@ Ready? Here's the full content to paste:
 
 ---
 
+## 6. BUG FIX LOG
+
+| Bug | Commit | Status |
+|---|---|---|
+| CV truncation raised 3000→6000 chars | 5cfc182 | ✅ Fixed |
+| Empty .docx shows error message | 5cfc182 | ✅ Fixed |
+| Summary appends two sentences | 5cfc182 | ✅ Fixed |
+| Double "Tailored_" filename prefix | 5cfc182 | ✅ Fixed |
+| Summary sentence starts with "With" | 41df9c1 | ✅ Fixed |
+| No spinner during loading | latest | ✅ Fixed |
+| Dead code — PLATFORM_OPTIONS, ATS_OPTIONS, handleTailorAnother | latest | ✅ Fixed |
+
 *Testing conducted by Chayan Narang as part of white box testing exercise before Vercel deployment.*
