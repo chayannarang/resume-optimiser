@@ -85,7 +85,7 @@ function buildParagraph(line, type) {
 }
 
 export async function downloadWord(cvText, filename = 'tailored-cv') {
-  const lines = cvText.split('\n');
+  const lines = cvText.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
 
   const paragraphs = lines.map((line, i) => {
     const type = classifyLine(line, i);
