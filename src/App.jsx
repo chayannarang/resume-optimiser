@@ -63,15 +63,6 @@ export default function App() {
     setPhase('input');
   }
 
-  function handleTailorAnother() {
-    const cvText = formData?.cvText ?? '';
-    setMode('w1');
-    setFormData({ mode: 'w1', cvText, preFilled: true });
-    setAnalysisResult(null);
-    setAnalysisError(null);
-    setPhase('input');
-  }
-
   return (
     <div className="min-h-screen bg-bg-base font-body text-text-primary">
       {phase === 'input' && (
@@ -84,7 +75,8 @@ export default function App() {
       )}
 
       {phase === 'loading' && (
-        <div className="flex min-h-screen items-center justify-center">
+        <div className="flex min-h-screen items-center justify-center flex-col gap-4">
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-border-subtle border-t-accent" />
           <p className="font-mono text-sm text-text-secondary">Analysing…</p>
         </div>
       )}
@@ -98,7 +90,7 @@ export default function App() {
           onReset={handleReset}
           onRetry={handleRetry}
           onSwitchToTailor={handleSwitchToTailor}
-          onTailorAnother={handleTailorAnother}
+          onTailorAnother={handleSwitchToTailor}
         />
       )}
     </div>
