@@ -178,9 +178,9 @@ export default function UploadForm({ mode, onSubmit, preFillCv = '' }) {
     }
 
     if (cvText.trim().length < 100)
-      errors.cvText = 'CV seems too short. Please paste your full CV.';
+      errors.cvText = 'Resume seems too short. Please paste your full resume.';
     else if (countWords(cvText) > 1500)
-      errors.cvText = 'CV is too long. Please trim to 2 pages of content.';
+      errors.cvText = 'Resume is too long. Please trim to 2 pages of content.';
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
@@ -232,7 +232,7 @@ export default function UploadForm({ mode, onSubmit, preFillCv = '' }) {
 
         {/* ── CV Section (both modes) ───────────────────────────────────── */}
         <div>
-          <SectionLabel>Your CV</SectionLabel>
+          <SectionLabel>Your Resume</SectionLabel>
 
           {/* File upload zone */}
           <div
@@ -271,7 +271,7 @@ export default function UploadForm({ mode, onSubmit, preFillCv = '' }) {
               <>
                 <UploadCloud size={20} strokeWidth={1.5} className="mx-auto mb-2 text-text-muted" />
                 <p className="font-body text-sm text-text-secondary">
-                  {isParsingFile ? 'Reading file…' : 'Drop your CV here, or click to browse'}
+                  {isParsingFile ? 'Reading file…' : 'Drop your resume here, or click to browse'}
                 </p>
                 <p className="mt-1 font-body text-xs text-text-muted">PDF or Word · max 5MB</p>
               </>
@@ -288,7 +288,7 @@ export default function UploadForm({ mode, onSubmit, preFillCv = '' }) {
           {/* CV textarea */}
           <textarea
             rows={8}
-            placeholder="Paste your CV here..."
+            placeholder="Paste your resume here..."
             value={cvText}
             onChange={(e) => setCvText(e.target.value)}
             style={{ minHeight: '160px' }}
@@ -315,8 +315,8 @@ export default function UploadForm({ mode, onSubmit, preFillCv = '' }) {
           {isSubmitting
             ? 'Submitting…'
             : mode === 'w1'
-            ? 'Tailor My CV'
-            : 'Score My CV'}
+            ? 'Tailor My Resume'
+            : 'Score My Resume'}
         </button>
 
       </div>

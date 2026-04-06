@@ -235,7 +235,7 @@ const raw = formData?.cvFileName ?? '';
                   disabled={isRewriting}
                   className="w-full rounded-sm bg-accent px-6 py-3 font-body text-sm font-medium text-white transition-all duration-150 hover:bg-accent-hover hover:-translate-y-px active:translate-y-0 disabled:cursor-not-allowed disabled:bg-bg-elevated disabled:text-text-muted"
                 >
-                  {isRewriting ? 'Generating…' : 'Generate Tailored CV'}
+                  {isRewriting ? 'Generating…' : 'Generate Tailored Resume'}
                 </button>
                 {rewriteError && (
                   <div className="mt-3 rounded-md border border-error/30 bg-error-bg p-4">
@@ -256,7 +256,7 @@ const raw = formData?.cvFileName ?? '';
               <section>
                 <div className="mb-3 flex items-center justify-between">
                   <h2 className="font-display text-xs font-semibold uppercase tracking-[0.10em] text-text-secondary">
-                    Your Tailored CV
+                    Your Tailored Resume
                   </h2>
                   <div className="flex gap-2">
                     <button
@@ -290,13 +290,13 @@ const raw = formData?.cvFileName ?? '';
                   onClick={onSwitchToTailor}
                   className="w-full rounded-sm bg-accent py-3 font-body text-sm font-medium text-white transition-all duration-150 hover:bg-accent-hover hover:-translate-y-px active:translate-y-0"
                 >
-                  Tailor CV to JD →
+                  Tailor Resume to JD →
                 </button>
                 <button
                   onClick={onReset}
                   className="w-full rounded-sm border border-accent bg-transparent py-3 font-body text-sm font-medium text-accent transition-all duration-150 hover:bg-accent/[0.06] hover:-translate-y-px active:translate-y-0"
                 >
-                  Score a Different CV
+                  Score a Different Resume
                 </button>
               </div>
             ) : rewrittenCv ? (

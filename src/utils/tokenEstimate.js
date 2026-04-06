@@ -19,6 +19,6 @@ export function validateCombinedLength(cvText, jdText) {
     totalWords,
     error: valid
       ? null
-      : 'Combined CV and JD too long. Please trim one or both. Recommended max: 2000-2500 words',
+      : 'Combined Resume and JD too long. Please trim one or both. Recommended max: 2000-2500 words',
   };
 }

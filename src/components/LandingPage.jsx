@@ -2,8 +2,8 @@ import { Lock } from 'lucide-react';
 import UploadForm from './UploadForm';
 
 const TABS = [
-  { id: 'w2', label: 'Score My CV' },
-  { id: 'w1', label: 'Tailor CV to Job' },
+  { id: 'w2', label: 'Score My Resume' },
+  { id: 'w1', label: 'Tailor Resume to Job' },
 ];
 
 export default function LandingPage({ mode, onModeChange, onSubmit, preFillCv }) {
@@ -17,7 +17,7 @@ export default function LandingPage({ mode, onModeChange, onSubmit, preFillCv })
             ResumeOptimiser
           </h1>
           <p className="mt-2 text-base text-text-secondary">
-            Free AI tool that scores and tailors your CV. Powered by Groq.
+            Free AI tool that scores and tailors your resume. Powered by Groq.
           </p>
         </header>
 

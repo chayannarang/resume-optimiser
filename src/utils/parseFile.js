@@ -30,7 +30,7 @@ export async function extractTextFromPDF(file) {
   // Heuristic: a scanned/image PDF has very little extractable text
   if (fullText.length < 50) {
     throw new Error(
-      "Scanned CVs aren't supported. Please paste your CV as text instead."
+      "Scanned resumes aren't supported. Please paste your resume as text instead."
     );
   }
 
@@ -44,7 +44,7 @@ export async function extractTextFromWord(file) {
   const arrayBuffer = await file.arrayBuffer();
   const result = await mammoth.extractRawText({ arrayBuffer });
   if (result.value.trim().length === 0) {
-    throw new Error("We couldn't read any text from this file. Please paste your CV as text instead.");
+    throw new Error("We couldn't read any text from this file. Please paste your resume as text instead.");
   }
   return result.value.trim();
 }
